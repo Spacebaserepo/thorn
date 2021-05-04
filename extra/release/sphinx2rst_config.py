@@ -1,4 +1,4 @@
-from __future__ import absolute_import, unicode_literals
+
 
 rtd_base = 'http://thorn.readthedocs.io/en/latest'
 

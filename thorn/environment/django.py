@@ -1,5 +1,5 @@
 """Django web framework environment."""
-from __future__ import absolute_import, unicode_literals
+
 
 import importlib
 import os

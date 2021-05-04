@@ -1,5 +1,5 @@
 """User-defined webhook events."""
-from __future__ import absolute_import, unicode_literals
+
 
 from operator import attrgetter
 from six import iteritems as items, iterkeys as keys

@@ -1,5 +1,5 @@
 """Python version compatibility utilities."""
-from __future__ import absolute_import, unicode_literals
+
 
 import sys
 
@@ -20,7 +20,7 @@ if PY3:  # pragma: no cover
 else:  # pragma: no cover
     def want_bytes(s):  # noqa
         """Convert str to bytes."""
-        return s.encode() if isinstance(s, unicode) else s
+        return s.encode() if isinstance(s, str) else s
     bytes_if_py2 = want_bytes
 
     def bytes_if_py3(s):  # noqa

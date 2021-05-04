@@ -1,18 +1,15 @@
 """Generic base model mixins."""
-from __future__ import absolute_import, unicode_literals
+
 
 from abc import ABCMeta, abstractmethod, abstractproperty
 from six import string_types
-
-from celery.five import with_metaclass
 
 from thorn._state import current_app
 
 __all__ = ['AbstractSubscriber', 'SubscriberModelMixin']
 
 
-@with_metaclass(ABCMeta)
-class AbstractSubscriber(object):
+class AbstractSubscriber(metaclass=ABCMeta):
     """Abstract class for Subscriber identity."""
 
     #: Unique identifier.

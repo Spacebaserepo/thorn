@@ -41,15 +41,15 @@ Two new API endpoints will now be available in your application:
 
     Delete subscription given its unique identifier (uuid).
 """
-from __future__ import absolute_import, unicode_literals
 
-from django.conf.urls import url
+
+from django.urls import path
 
 from . import views
 
 urlpatterns = [
-    url(r'^$',
-        views.SubscriberList.as_view(), name='list'),
-    url(r'^(?P<uuid>[0-9a-fA-F-]+)/$',
-        views.SubscriberDetail.as_view(), name='detail'),
+    path('',
+         views.SubscriberList.as_view(), name='list'),
+    path('<uuid:uuid>/',
+         views.SubscriberDetail.as_view(), name='detail'),
 ]

@@ -3,7 +3,7 @@
 Custom Celery worker remote control commands
 used in the Thorn functional test suite.
 """
-from __future__ import absolute_import, unicode_literals
+
 
 from collections import Mapping
 

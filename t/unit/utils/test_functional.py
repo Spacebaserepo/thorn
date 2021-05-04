@@ -1,4 +1,4 @@
-from __future__ import absolute_import, unicode_literals
+
 
 import pytest
 
@@ -8,8 +8,8 @@ from thorn.utils.functional import Q, chunks, traverse_subscribers
 
 
 @pytest.mark.parametrize('max,input,expected', [
-    (2, range(10), [[0, 1], [2, 3], [4, 5], [6, 7], [8, 9]]),
-    (2, range(9), [[0, 1], [2, 3], [4, 5], [6, 7], [8]]),
+    (2, list(range(10)), [[0, 1], [2, 3], [4, 5], [6, 7], [8, 9]]),
+    (2, list(range(9)), [[0, 1], [2, 3], [4, 5], [6, 7], [8]]),
 ])
 def test_chunks(max, input, expected):
     assert list(chunks(iter(input), max)) == expected

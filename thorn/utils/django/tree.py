@@ -2,7 +2,7 @@
 
 Primarily used for filter constructs in the ORM.
 """
-from __future__ import absolute_import, unicode_literals
+
 
 import copy
 
@@ -60,7 +60,7 @@ class Node(object):
         """For truth value testing."""
         return bool(self.children)
 
-    def __nonzero__(self):      # Python 2 compatibility
+    def __bool__(self):      # Python 2 compatibility
         return type(self).__bool__(self)
 
     def __contains__(self, other):

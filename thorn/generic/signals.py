@@ -1,5 +1,5 @@
 """Dispatching by signal."""
-from __future__ import absolute_import, unicode_literals
+
 
 from six import iteritems as items
 

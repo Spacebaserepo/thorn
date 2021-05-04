@@ -2,7 +2,7 @@
 
 API endpoints for users to create and manage their webhook subscriptions.
 """
-from __future__ import absolute_import, unicode_literals
+
 
 from rest_framework.generics import (
     ListCreateAPIView, RetrieveUpdateDestroyAPIView,

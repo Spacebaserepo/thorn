@@ -58,7 +58,7 @@ with open(os.path.join(here, 'thorn', '__init__.py')) as meta_fh:
     for line in meta_fh:
         if line.strip() == '# -eof meta-':
             break
-        for pattern, handler in pats.items():
+        for pattern, handler in list(pats.items()):
             m = pattern.match(line.strip())
             if m:
                 meta.update(handler(m))
@@ -75,8 +75,8 @@ def strip_comments(l):
 
 
 def reqs(f):
-    return list(filter(None, [strip_comments(l) for l in open(
-        os.path.join(os.getcwd(), 'requirements', f)).readlines()]))
+    return list([_f for _f in [strip_comments(l) for l in open(
+        os.path.join(os.getcwd(), 'requirements', f)).readlines()] if _f])
 
 install_requires = reqs('default.txt')
 if not PY3:

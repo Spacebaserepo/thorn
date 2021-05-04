@@ -1,14 +1,14 @@
 """Internal state."""
-from __future__ import absolute_import, unicode_literals
+
 
 import threading
-
-from vine.five import monotonic
 
 __all__ = [
     'current_app', 'set_current_app', 'set_default_app',
     'app_or_default', 'buffer_events',
 ]
+
+from time import monotonic
 
 
 class _TLS(threading.local):

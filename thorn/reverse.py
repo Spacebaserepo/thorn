@@ -1,5 +1,5 @@
 """Tools for URL references."""
-from __future__ import absolute_import, unicode_literals
+
 
 from operator import attrgetter
 from six import iteritems as items

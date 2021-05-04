@@ -1,5 +1,5 @@
 """Thorn Application."""
-from __future__ import absolute_import, unicode_literals
+
 
 from operator import attrgetter, methodcaller
 
@@ -89,7 +89,7 @@ class Thorn(object):
 
     def autodetect_env(self, apply=methodcaller('autodetect')):
         # type: (Callable) -> Any
-        return first(apply, map(symbol_by_name, self.environments))()
+        return first(apply, list(map(symbol_by_name, self.environments)))()
 
     def _get_dispatcher(self, dispatcher=None):
         # type: (Union[str, Dispatcher]) -> Dispatcher

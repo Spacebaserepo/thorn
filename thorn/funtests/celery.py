@@ -2,7 +2,7 @@
 
 Celery application used for the Thorn Cyanide test suite.
 """
-from __future__ import absolute_import, unicode_literals
+
 
 import cyanide.app
 import django

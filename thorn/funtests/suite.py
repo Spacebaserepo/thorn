@@ -30,7 +30,7 @@ For a list of tests that you can select see:
 
     $ celery -A thorn.funtests cyanide -l
 """
-from __future__ import absolute_import, unicode_literals
+
 
 from celery.utils.imports import qualname
 

@@ -1,5 +1,5 @@
 """Webhook decorators."""
-from __future__ import absolute_import, unicode_literals
+
 import inspect
 from itertools import chain
 from six import iteritems as items, itervalues as values
