@@ -11,6 +11,7 @@ from django.utils.translation import gettext_lazy as _
 from thorn.conf import event_choices, MIME_JSON, MIME_URLFORM
 from thorn.generic.models import AbstractSubscriber, SubscriberModelMixin
 from thorn.utils.hmac import random_secret
+from thorn.utils.django.fields import ChoicesCharField
 
 from .managers import SubscriberManager
 
@@ -42,7 +43,7 @@ class Subscriber(models.Model, SubscriberModelMixin):
         help_text=_('Unique identifier for this subscriber.')
     )
 
-    event = models.CharField(
+    event = ChoicesCharField(
         _('event'),
         max_length=CHAR_MAX_LENGTH,
         choices=event_choices(),
