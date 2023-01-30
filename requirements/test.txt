@@ -3,4 +3,4 @@ pytest
 pytest-django
 mockredispy
 djangorestframework
-pytz>dev
+pytz
